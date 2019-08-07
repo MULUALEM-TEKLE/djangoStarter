@@ -10,6 +10,6 @@ class post_feed(TemplateView):
 
 def get_context_data(self, *args , **kwargs):
     context = super().get_context_data(**kwargs)
-    context["posts"] = Post.objects.all() 
+    context["posts"] = Post.objects.all()
     return context
 

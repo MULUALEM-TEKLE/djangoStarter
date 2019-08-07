@@ -5,11 +5,9 @@ from djangoStarter.models import Post
 
 # Create your views here.
 
-class post_feed(TemplateView):
+class PostFeed(TemplateView):
     template_name = 'index.html'
 
-def get_context_data(self, *args , **kwargs):
-    context = super().get_context_data(**kwargs)
-    context["posts"] = Post.objects.all()
-    return context
-
+    def get_context_data(self, *args, **kwargs):
+        context = dict()
+        context["posts"] = Post.objects.all()

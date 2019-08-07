@@ -106,3 +106,6 @@ venv.bak/
 # Media dir
 
 media/
+
+# vscode
+.vscode/

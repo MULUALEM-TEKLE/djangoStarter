@@ -18,7 +18,10 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 
+from djangoStarter.views import post_feed
+
 urlpatterns = [
+    path('', post_feed.as_view(template_name="index.html"), name="post_feed"),
     path('admin/', admin.site.urls),
 ]
 # Enabling the medua path during development
